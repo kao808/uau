@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ua'u Team</title>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>KA'O'S TEAM</h1>
+        </div>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#tasks">Tasks</a></li>
+                <li><a href="#calendar">Calendar</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#docs">Docs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Task Section -->
+        <section id="tasks" class="task-section">
+            <h2>DAILY TASK'S</h2>
+            <ul id="task-list">
+                <!-- Tasks will be dynamically inserted here -->
+            </ul>
+        </section>
+
+        <!-- Calendar Section -->
+        <section id="calendar" class="calendar-section">
+            <h2>Task Calendar</h2>
+            <div id="calendar"></div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="resources-section">
+            <h2>USEFUL RESOURCES</h2>
+            <ul>
+                <li><a href="https://drive.google.com/drive/folders/18Udzb2O66eqTiwph_6XiVucE1CC-dOnK" target="_blank">Photo Examples (IS)</a></li>
+                <li><a href="https://www.slidesho.com.au/12-qualities-of-a-great-presenter/" target="_blank">Presenter Tips</a></li>
+                <li><a href="https://imiloahawaii.org/" target="_blank">'Imiloa'</a></li>
+            </ul>
+        </section>
+
+        <!-- Google Docs Section -->
+        <section id="docs" class="docs-section">
+            <div class="doc-container">
+                <iframe src="https://docs.google.com/document/d/1LfP6imuBwYfgyi3yhrx5TnHR1QNiKdgN5ikP24oqMPU/pub?embedded=true" class="doc-frame"></iframe>
+            </div>
+            <div class="doc-container">
+                <iframe src="https://docs.google.com/document/d/1iHG-spjSsEwkko9rXV2maHmre9fKpeqhpLcUQCH7qF8/pub?embedded=true" class="doc-frame"></iframe>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Kao's Contact Information</h2>
+            <p>If you have any questions or need to get in touch, you can reach me at:</p>
+            <p>Email: <a >kao25@hawaii.edu</a></p>
+            <p>Phone: (808) 892-6644</p>
+        </section>
+    </main>
+
+    <!-- FullCalendar Script -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'timeGridWeek', // Week view
+                events: [
+                    {
+                        title: 'Task 1',
+                        start: '2024-09-11T09:00:00',
+                        description: 'Find and talk to Ka’o when you get into the office'
+                    },
+                    {
+                        title: 'Task 2',
+                        start: '2024-09-12T10:00:00',
+                        description: 'Practice presenting to each other.'
+                    },
+                    {
+                        title: 'Task 3',
+                        start: '2024-09-13T11:00:00',
+                        description: 'Work on Canva slide for exhibit hall tour.'
+                    }
+                ],
+                eventClick: function(info) {
+                    alert('Task: ' + info.event.title + '\nDescription: ' + info.event.extendedProps.description);
+                }
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+</html>

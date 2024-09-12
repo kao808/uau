@@ -1,0 +1,182 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background: radial-gradient(circle, #1b2735, #090a0f); /* Space-like gradient background */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuD2jJs0PRYAB9KGXiBGJ_z6R02T2dEB1WQg&s'); /* Space background image */
+    background-size: Cover; /* Cover the entire area */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat; /* Prevent repetition */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-content h1 {
+    margin: 0;
+    color: #00ff88;
+    font-size: 32px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #888282;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #00ff88;
+}
+
+/* Main Section Styling */
+main {
+    padding: 20px;
+}
+
+/* Task Section */
+.task-section {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.task-section h2 {
+    margin-top: 0;
+    color: #ff0000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Calendar Section */
+.calendar-section {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.calendar-section h2 {
+    margin-top: 0;
+    color: #ff0000;
+}
+
+#calendar {
+    background-color: #000;
+    border-radius: 8px;
+    padding: 10px;
+    width: 80%;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Resources Section */
+.resources-section {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.resources-section h2 {
+    margin-top: 0;
+    color: #ff0000;
+}
+
+.resources-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resources-section ul li {
+    margin-bottom: 10px;
+}
+
+.resources-section ul li a {
+    text-decoration: none;
+    color: #00ff88;
+}
+
+.resources-section ul li a:hover {
+    color: #ffffff;
+}
+
+/* Google Docs Section */
+.docs-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.doc-container {
+    flex: 1;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.doc-frame {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .docs-section {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .navbar ul li a {
+        display: block;
+    }
+
+    #calendar {
+        width: 100%;
+        height: 300px;
+    }
+}
